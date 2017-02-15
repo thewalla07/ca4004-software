@@ -1,0 +1,156 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{datetime}
+\usepackage{geometry}
+
+\geometry{a4paper}
+
+\usepackage{graphicx}
+\usepackage{svg}
+\usepackage{amssymb}
+\usepackage{epstopdf}
+\usepackage{endnotes}
+\let\footnote=\endnote
+\setlength\parindent{0pt}
+\setlength{\parskip}{6pt}
+\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+
+\title{Software Engineering report on Software Failures\\CASE4 CA4004}
+\author{Michael Wall 13522003 michael.wall22@mail.dcu.ie\\name 12345678 name@mail.dcu.ie\\name 12345678 name@mail.dcu.ie}
+\date{\today}
+
+\begin{document}
+\maketitle
+\newpage
+
+\tableofcontents
+
+\newpage
+
+\section{Disclaimer}
+FILL THIS IN
+
+Name(s): \\Michael Wall\\George McNally\\Ryan McDyer\\
+
+Date:
+
+\newpage
+
+\section{Abstract}
+
+\section{Nissan Occupant Classification System}
+Car manufacturer Nissan has had to recall upwards of 3.53 million cars worldwide. The recall is due to a failure in its Occupant Classification System (OCS) in which it may fail to correctly identify an adult occupant in the front passenger seat, but instead recognise the person as a child passenger or an empty seat. If this occurs, the sytem is designed not to inflate the airbag in the case of a crash. Nissan reported a number of incedents regarding the airbags, but no fatalaties have occured as a result. 
+
+According to Nissan spokesman David Reuter, "The planned remedy varies by vehicle and will include software reprogramming in some models and hardware replacement in other models".
+
+The company filed two safety recall reports on April 28, 2016. The reports detail the extent of the recall and the cause of the failure.
+
+The National Highway Traffic Safety Administration (NHTSA) safety recall report 16V-242 details a defect. If the child restraint system (CRS) is installed in the front seat, it may cause the buckle to deform. This may result in the OCS sensor not detecting the CRS and hence not deploying the airbag as intended in this case.
+
+In another safety recall report filed on the same day (16V-244), Nissan details further failure of its OCS algorithm. The system could classify the occupant as a child, in which case the system is designed not to engage the airbag and a Passenger Airbag Indicator light alerts the user to this fact. The system could also classify the seat as being empty, due to an unusual seating position. This would again result in the airbag not engaging.
+
+Nissan detailed in the reports that a total of 3,799,755 vehicles were affected by the issue. The vehicles were manufactured between the years 2011 and 2016.
+
+Nissan released no estimate of the financial cost of repairing or replacing units with the faulty software.
+
+The issue likely occured due to a failure to fully test all of the scenarios in which a passenger could sit in the car. It is also possible that the sensor passed all of its tests in the software development stage, but was not adequately tested in the integration phase of development.
+
+In order to rectify the issue, Nissan could have introduced more testing of the software during integration, and by having users as part of the test cycle of the project. In doing so, they may have experienced the unusual seating positions of the users which resulted in the fault being highlighted.
+
+\newpage
+
+\begin{thebibliography}{9}
+
+\bibitem{vocr_recall}
+    D. Das,
+    D. Chen
+    and A.G. Hauptmann,
+    ``Improving Multimedia Retrieval with a Video OCR'',
+    in \emph{Dipanjan Das}.
+    [Online]
+    Available: http://www.dipanjandas.com/files/VOCR\_draft.pdf.
+    Accessed: Nov, 23, 2016.
+
+\bibitem{vocr_gurmukhi}
+    G. S. Lehal
+    and An Singh,
+    ``Feature Extraction and Classification for OCR of Gurmukhi Script'',
+    in \emph{CiteSeer\textsuperscript{x}}.
+    [Online]
+    Available: http://www.learnpunjabi.org/pdf/vivek1.pdf.
+    Accessed: Nov, 23, 2016.
+
+\bibitem{vocr_base}
+    J. Tariq,
+    U. Nauman
+    and M. Umair Naru,
+    ``α-Soft: An English language OCR'',
+    \emph{2010 2nd International Conference on Computer Engineering and Technology},
+    Chengdu,
+    2010,
+    in \emph{IEEEXplore\textregistered}.
+    [Online]
+    Available: http://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=5486152.
+    Accessed: Nov, 23, 2016.
+
+\bibitem{vocr_grad}
+    Chen Yu,
+    Chen Dian-ren,
+    Li Yang
+    and Chen Lei,
+    ``Otsu's thresholding method based on gray level-gradient two-dimensional histogram'',
+    \emph{2010 2nd International Asia Conference on Informatics in Control, Automation and Robotics (CAR 2010)},
+    Wuhan,
+    2010,
+    in \emph{IEEEXplore\textregistered}.
+    [Online]
+    Available: http://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=5456687.
+    Accessed: Nov, 23, 2016.
+
+\bibitem{asr_cap}
+    ``YouTube Data API, Captions: download'',
+    2016,
+    in \emph{Google Developers}.
+    [Online]
+    Available: https://developers.google.com/youtube/v3/docs/captions/download.
+    Accessed: Dec, 2, 2016.
+
+\bibitem{asr_speech}
+    ``Cloud Speech API\textsuperscript{beta}'',
+    2016,
+    in \emph{Google Cloud Platform}.
+    [Online]
+    Available: https://cloud.google.com/speech/.
+    Accessed: Dec, 2, 2016.
+
+\bibitem{porter_stem}
+    C. J. van Rijsbergen,
+    S. E. Robertson
+    and M. F. Porter,
+    ``New models in probabilistic information retrieval'',
+    1980,
+    London,
+    British Library Research and Development Report, no. 5587.
+
+\bibitem{tf_idf}
+    G. Jones,
+    ``Text Retrieval'',
+    2016,
+    in \emph{Loop}.
+    [Online]
+    Available: https://loop.dcu.ie/pluginfile.php/755925/mod\_resource/content/5/ir.pdf.
+    Accessed: Nov, 23, 2016.
+
+\bibitem{bm_25}
+    G. Jones,
+    ``Text Retrieval - BM25'',
+    2016,
+    in \emph{Loop}.
+    [Online]
+    Available: https://loop.dcu.ie/pluginfile.php/821757/mod\_resource/content/2/ir\_BM25.pdf.
+    Accessed: Nov, 23, 2016.
+
+
+
+\end{thebibliography}
+
+\end{document}
